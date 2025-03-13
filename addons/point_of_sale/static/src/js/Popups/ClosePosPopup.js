@@ -114,6 +114,9 @@ odoo.define('point_of_sale.ClosePosPopup', function(require) {
         closePos() {
             this.trigger('close-pos');
         }
+        closeReload() {
+            window.location = '/web#action=point_of_sale.action_client_pos_menu';
+        }
         async closeSession() {
             if (this.canCloseSession() && !this.closeSessionClicked) {
                 this.closeSessionClicked = true;
@@ -151,7 +154,7 @@ odoo.define('point_of_sale.ClosePosPopup', function(require) {
                     if (!response.successful) {
                         return this.handleClosingError(response);
                     }
-                    window.location = '/web#action=point_of_sale.action_client_pos_menu';
+                    this.closeReload();
                 } catch (error) {
                     const iError = identifyError(error);
                     if (iError instanceof ConnectionLostError || iError instanceof ConnectionAbortedError) {

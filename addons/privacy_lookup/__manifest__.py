@@ -12,7 +12,7 @@
         'security/ir.model.access.csv',
         'data/ir_actions_server_data.xml',
     ],
-    'auto_install': True,
+    'auto_install': False,
     'author': 'Odoo S.A.',
     'license': 'LGPL-3',
 }

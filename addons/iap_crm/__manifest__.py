@@ -13,7 +13,7 @@
         'iap_mail',
     ],
     'installable': True,
-    'auto_install': True,
+    'auto_install': False,
     'author': 'Odoo S.A.',
     'license': 'LGPL-3',
 }

@@ -36,7 +36,7 @@ Pro rules and show the errors.
         ],
     },
     'installable': True,
-    'auto_install': True,
+    'auto_install': False,
     'author': 'Odoo S.A.',
     'license': 'LGPL-3',
     'uninstall_hook': 'uninstall_hook',
